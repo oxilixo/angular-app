@@ -1,0 +1,30 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "sourceType": "module"
+  },
+  "extends": [
+    "airbnb-typescript/base",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": ["@typescript-eslint", "import", "jsx-a11y", "react"],
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  },
+  "rules": {
+    "import/prefer-default-export": "off", // Disable default export rule (Angular style)
+    "react/react-in-jsx-scope": "off", // Not relevant for Angular, turn off react-specific rule
+    "jsx-a11y/click-events-have-key-events": "warn", // For accessibility
+    "@typescript-eslint/no-explicit-any": "error",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "strict": ["error"]
+  }
+}

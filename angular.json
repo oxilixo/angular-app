@@ -39,7 +39,12 @@
             "prerender": true,
             "ssr": {
               "entry": "server.ts"
-            }
+            },"lintFilePatterns": [
+            "src/**/*.ts",
+            "src/**/*.html",
+            "src/**/*.css",
+            "src/**/*.scss"
+          ]
           },
           "configurations": {
             "production": {
